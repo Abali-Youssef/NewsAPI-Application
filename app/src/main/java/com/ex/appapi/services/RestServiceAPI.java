@@ -1,5 +1,8 @@
 package com.ex.appapi.services;
 
+import com.ex.appapi.models.ListNews;
+import com.ex.appapi.models.News;
+
 import java.util.Date;
 
 import retrofit2.Call;
@@ -8,7 +11,6 @@ import retrofit2.http.Query;
 
 public interface RestServiceAPI {
 
-    @GET("/")
-    Call<RestServiceAPI> listNewsByKey(@Query("q") String word, @Query("from") Date date, @Query("apikey") String key);
-
+    @GET("v2/everything/")
+    Call<ListNews> listNewsByKey(@Query("q") String word, @Query("from") String date, @Query("apikey") String key);
 }
