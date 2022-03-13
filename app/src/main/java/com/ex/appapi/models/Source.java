@@ -1,6 +1,8 @@
 package com.ex.appapi.models;
 
-public class Source {
+import java.io.Serializable;
+
+public class Source implements Serializable {
     private String Id;
     private String name;
 

@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppAPI" >
         <activity
-            android:name=".NewsDetail"
+            android:name=".NewsActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

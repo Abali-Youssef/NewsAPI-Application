@@ -1,6 +1,8 @@
 package com.ex.appapi.models;
 
-public class News {
+import java.io.Serializable;
+
+public class News implements Serializable {
     private Source source;
     private String author;
     private String title;

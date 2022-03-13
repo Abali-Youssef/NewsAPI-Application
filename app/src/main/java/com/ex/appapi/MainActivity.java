@@ -2,8 +2,10 @@ package com.ex.appapi;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -62,6 +64,15 @@ public class MainActivity extends AppCompatActivity {
 
                     }
                 });
+            }
+        });
+        listViewNews.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                //Toast.makeText(getApplicationContext(),data.get(i).getLogin(),Toast.LENGTH_SHORT).show();
+                Intent intent=new Intent(getApplicationContext(),NewsActivity.class);
+                intent.putExtra("news",data.get(i));
+                startActivity(intent);
             }
         });
     }
